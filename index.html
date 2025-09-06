@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DSA Visualizer (Web)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="sidebar">
+    <h2>DSA Visualizer</h2>
+
+    <!-- Mode Switch -->
+    <label>Mode:</label>
+    <select id="mode">
+      <option value="Algorithm">Algorithms</option>
+      <option value="DataStructure">Data Structures</option>
+    </select>
+
+    <!-- Algorithm Controls -->
+    <div id="algo-controls" class="controls">
+      <label>Algorithm:</label>
+      <select id="algo">
+        <option>Bubble</option>
+        <option>Selection</option>
+        <option>Insertion</option>
+        <option>Merge</option>
+        <option>Quick</option>
+      </select>
+
+      <button onclick="startSort()">▶ Start</button>
+      <button onclick="resetArray()">⟳ Reset</button>
+
+      <label>Speed:
+        <input type="range" id="speed" min="10" max="500" value="100">
+      </label>
+      <label>Size:
+        <input type="range" id="size" min="5" max="100" value="30">
+      </label>
+    </div>
+
+    <!-- Data Structure Controls -->
+    <div id="ds-controls" class="controls">
+      <label>Data Structure:</label>
+      <select id="ds">
+        <option>Array</option>
+        <option>Stack</option>
+        <option>Queue</option>
+        <option>LinkedList</option>
+        <option>Tree</option>
+        <option>Graph</option>
+      </select>
+
+      <!-- CRUD buttons, search boxes, etc. will be injected here -->
+      <div id="crud-controls"></div>
+    </div>
+  </div>
+
+  <!-- Canvas Area -->
+  <canvas id="canvas" width="900" height="600"></canvas>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
